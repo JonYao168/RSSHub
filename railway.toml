@@ -4,3 +4,6 @@ buildCommand = "npm install --legacy-peer-deps && npm run build"
 
 [nodejs]
 version = "22"
+
+[build.args]
+PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "0"
