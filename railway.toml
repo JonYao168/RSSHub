@@ -1,10 +1,6 @@
 [build]
 builder = "NIXPACKS"
-
-[nixpacks]
-install_phase = "npm install --legacy-peer-deps"
-build_phase = "npm run build"
-start_phase = "node dist/index.mjs"
+buildCommand = "npm install --legacy-peer-deps && npm run build"
 
 [nodejs]
 version = "22"
