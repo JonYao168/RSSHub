@@ -92,7 +92,7 @@ COPY --from=dep-version-parser /ver/.playwright_version /app/.playwright_version
 
 ARG TARGETPLATFORM
 ARG USE_CHINA_NPM_REGISTRY=0
-ARG PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+ARG PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=0
 # The official recommended way to use Playwright on x86(_64) is to use the bundled browser.
 RUN \
     set -ex ; \
@@ -126,7 +126,7 @@ WORKDIR /app
 
 # install deps first to avoid cache miss or disturbing buildkit to build concurrently
 ARG TARGETPLATFORM
-ARG PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+ARG PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=0
 # https://playwright.dev/docs/docker#introduction
 # https://www.debian.org/releases/bookworm/amd64/release-notes/ch-information.en.html#noteworthy-obsolete-packages
 # On arm/arm64, install Chromium from the distribution repositories.
