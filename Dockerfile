@@ -1,3 +1,4 @@
+# Railway: force rebuild 2026-06-06
 FROM node:24-bookworm AS dep-builder
 # Here we use the non-slim image to provide build-time deps (compilers and python), thus no need to install later.
 # This effectively speeds up qemu-based cross-build.
